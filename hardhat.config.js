@@ -12,7 +12,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const RINKEBY_URL = process.env.RINKEBY_RUL
 const ETHERSCAN = process.env.ETHERSCAN
 const COINMARTCAP = process.env.COINMARTCAP
-const MAINNET_URL = process.env.MAINNET_URL
+const MAINNET = process.env.MAINNET_URL
 
 module.exports = {
     defaultNetwork: "hardhat",
@@ -21,7 +21,7 @@ module.exports = {
             chainId: 31337,
             blockCon: 1,
             forking: {
-                url: MAINNET_URL,
+                url: MAINNET,
             },
         },
         rinkeby: {
@@ -32,7 +32,7 @@ module.exports = {
         },
     },
     solidity: {
-        compilers: [{ version: "0.8.9" }, { version: "0.4.19" }],
+        compilers: [{ version: "0.8.9" }, { version: "0.4.19" }, { version: "0.6.12" }],
     },
     namedAccounts: {
         deployer: {
